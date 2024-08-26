@@ -1,0 +1,18 @@
+version: '3.9'
+
+services:
+  front-end:
+    build: ./back-end
+    ports:
+      - 9000:9000
+    depends_on:
+      - back-end
+
+  back-end:
+    build: ./front-end
+    ports:
+      - 5252:5252
+
+
+#docker-compose build
+#docker-compose up
